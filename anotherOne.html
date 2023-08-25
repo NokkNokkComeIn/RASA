@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+    fieldset {
+      display: block;
+      width: fit-content;
+      padding:10px;
+      border:none;
+    }
+
+    fieldset > label {
+      font-family: "Montserrat", sans-serif;
+      font-size: medium;
+      cursor: pointer;
+      display: block;
+      margin: 1em;
+    }
+
+    fieldset > label > input {
+      display: none;
+    }
+
+    fieldset > label > span {
+      color: dimgrey;
+    }
+
+    fieldset > label > i {
+      display: inline-block;
+      width: 50px;
+      height: 20px;
+      border-radius: 20px;
+      vertical-align: middle;
+      transition: 0.25s 0.09s;
+      position: relative;
+      background: lightgrey;
+    }
+
+    fieldset > label > i:after {
+      content: " ";
+      display: block;
+      width: 20px;
+      height: 20px;
+      /*top: 5px;*/
+      left: 5px;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.4);
+      transition: 0.15s;
+    }
+
+    fieldset > label > input:checked + i {
+      background: mediumblue;
+    }
+
+    fieldset > label > input:checked + i + span {
+      color: white;
+    }
+
+    fieldset > label > input:checked + i:after {
+      transform: translateX(25px);
+    }
+    fieldset  hr{
+      width: 10%;
+    }
+  </style>
+</head>
+<body>
+
+<fieldset>
+  <label>
+    <input class="cb cb1" type="checkbox" name="social" onclick="cbChange(this)" checked/>
+    <i></i>
+    <span>Diesel</span>
+  </label>
+  <label>
+    <input class="cb cb2" type="checkbox" name="work" onclick="cbChange(this)"/>
+    <i></i>
+    <span>Petrol</span>
+  </label>
+  <label>
+    <input class="cb cb3" type="checkbox" name="sleep" onclick="cbChange(this)" checked/>
+    <i></i>
+    <span>Eletric</span>
+  </label>
+</fieldset>
+
+</body>
+</html>
